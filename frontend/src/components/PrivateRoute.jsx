@@ -14,4 +14,4 @@ function PrivateRoute({allowrole}) {
  return <Outlet/>
 }
 
-export default PrivateRoute
+export default PrivateRoute;

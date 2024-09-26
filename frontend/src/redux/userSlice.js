@@ -47,7 +47,7 @@ const userSlice = createSlice({
     extraReducers : (builder) => {
     builder.addCase(Register.pending, (state)=>{
     state.loading = true ;
-    state.error = null
+    state.error = null ;
  }).addCase(Register.fulfilled , (state)=>{
     state.loading = false ;
     state.error = null
@@ -69,6 +69,7 @@ const userSlice = createSlice({
     //save the token , role in localstorage
     localStorage.setItem("token",token)
     localStorage.setItem('role', role )
+    localStorage.setItem('name', name )
     toast.success("Login Successfull")
  }).addCase(userLogin.rejected ,(state,action)=>{
     console.log(action.payload)
